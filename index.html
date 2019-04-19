@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Minimal Project">
+	 <meta name="description" content="Usual minimal web-site template">
+	 <meta name="author" content="adamaka47"> 
+	 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&amp;subset=latin-ext" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Condensed:400,700" rel="stylesheet">
+	 <link rel="stylesheet" href="css/normalize.css">
+	 <link rel="stylesheet" href="css/main.css">
+	 <link rel="icon" href="img/faviconka.png" type="image/x-icon" />
+	 <link rel="shortcut icon" href="img/faviconka.png" type="image/x-icon" />
+	<title>Minimal</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header_flex">
+				<div class="header_logo">
+					<a href="index.html"><img src="img/header_logo.png" alt="Logo"></a>
+				</div>
+				<div class="header_nav">
+					<nav>
+						<ul>
+							<li><a href="#products">Products</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main" id="products">
+		<div class="container">
+			<div class="main_flex">
+				<div class="main_img">
+					<img src="img/iphone.png" alt="Iphone">
+				</div>
+				<div class="main_info">
+					<div class="main_info_top">
+						<div class="main_info_top_img">
+							<img src="img/earth.png" alt=Global">
+						</div>
+						<h4>App of <span>The year</span></h4>
+					</div>
+					<div class="main_info_mid">
+						<h1>My apps shoecase</h1>
+						<p>Lorem ipsum is simply dunny test...</p>
+					</div>
+					<div class="main_info_bottom">
+						<div class="cart"><img src="img/main_cart.png" alt="Cart"></div>
+						<a class="btn" href="https://vk.me/sneakyadam">Buy Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<section id="minimal" class="minimal">
+		<div class="container">
+			<h2>About minimal</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+			<img src="img/minimal_main.png" alt="App">
+		</div>
+	</section>
+
+	<section class="icons" id="services">
+		<div class="blocks">
+			<div class="block block-1"></div>
+			<div class="block block-2"></div>
+			<div class="block block-3"></div>
+			<div class="block block-4"></div>
+			<div class="block block-5"></div>
+			<div class="block block-6"></div>
+		</div>
+	</section>
+
+	<section id="contact" class="laptop">
+		<div class="container">
+			<div class="laptop_flex">
+				<div class="laptop_img">
+					<img src="img/laptop.png" alt="Laptop">
+				</div>
+				<div class="laptop_info">
+					<h2>My apps shoecase</h2>
+					<p>Lorem ipsum is simply dummy test...</p>
+					<div class="main_info_bottom">
+						<div class="cart"><img src="img/main_cart.png" alt="Cart"></div>
+						<a class="btn" href="https://vk.me/sneakyadam">Buy Now</a>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>Copyright © 2019. <span>Adam Dasten</span></p>
+	</footer>
+
+
+
+	<script
+	  src="https://code.jquery.com/jquery-3.4.0.min.js"
+	  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+	  crossorigin="anonymous"></script>
+	  <script>
+	  		$(document).ready(function() {
+	  			var navLink = $('nav ul li a');
+	  			$(navLink).on('click', function(event) {
+	  				event.preventDefault();
+	  				var hrefs = $(this).attr('href');
+	  				var top = $(hrefs).offset().top;
+	  				$('html, body').animate({scrollTop: top}, 2000)
+	  			});
+	  		});	
+	  </script>
+</body>
+</html>

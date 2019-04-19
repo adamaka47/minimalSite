@@ -1,0 +1,258 @@
+html, body
+	width: 100%
+	height: 100%
+
+*:focus, *:hover
+	outline: none
+
+.container
+	width: 1024px
+	margin: 0px auto
+
+.header
+	padding: 20px 0
+	&_flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&_nav
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			display: flex
+			li
+				margin: 0px 7.5px
+				&::after
+					content: ' '
+					width: 1px
+					height: 20px
+					background-color: #565656
+					vertical-align: middle
+					display: inline-block
+					margin-left: 15px
+				&:last-child::after
+					width: 0
+				a
+					text-decoration: none
+					font-size: 20px
+					font-family: 'Roboto Condensed', sans-serif
+					vertical-align: middle
+					display: inline-block
+					color: #565656
+					transition-duration: 0.2s
+					transition-timing-function: linear
+					&:hover
+						color: #0dd88a
+
+
+	&_logo
+		display: block
+		height: auto
+		margin-left: 30px
+
+body
+	font-family: 'Open Sans', sans-serif
+
+
+.main
+	padding: 30px 0
+	background: url('../img/main_bg.jpg') center no-repeat
+	background-size: cover
+	&_flex
+		display: flex
+		align-items: center
+		justify-content: space-around
+	&_info
+		color: #fff
+		font-weight: 300
+		&_top
+			display: flex
+			align-items: center
+			h4
+				font-weight: 300
+				margin-left: 15px
+				text-transform: uppercase
+				font-size: 21px
+				span
+					display: block
+		&_mid
+			h1
+				font-weight: 300
+				font-size: 40px
+				text-transform: uppercase
+				margin: 0
+			p
+				margin: 0
+				margin-top: 10px
+				margin-bottom: 35px
+		&_bottom
+			display: flex
+			align-items: center
+			.cart
+				background-color: #259d8e
+				width: 55px
+				height: 40px
+				text-align: center
+				margin: 0
+				img
+					margin-top: 5px
+			.btn
+				margin: 0
+				padding: 0px 20px
+				height: 40px
+				border: none
+				font-weight: 300
+				background-color: #54d3c3
+				transition: .4s
+				color: #fff
+				&:hover
+					background-color: darken(#54d3c3, 20)
+					cursor: pointer
+
+a
+	text-decoration: none
+.btn
+	margin: 0
+	padding: 0px 20px
+	height: 40px
+	border: none
+	line-height: 40px
+	font-weight: 300
+	background-color: #54d3c3
+	transition: .4s
+	color: #fff
+
+.minimal
+	text-align: center
+	padding-top: 50px
+	padding-bottom: 100px
+	h2
+		font-size: 40px
+		color: #9f9f9f
+		text-transform: uppercase
+		font-weight: 600
+		margin: 0
+		margin-bottom: 30px
+	p
+		color: #9f9f9f
+		font-size: 15px
+		line-height: 1.4
+		margin: 0
+		margin-bottom: 30px
+
+.icons
+
+	.blocks
+		display: flex
+		flex-basis: 16%
+		.block
+			background-color: #222
+			width: calc(100%/6)
+			height: 170px
+			&-1
+				background: #01646c url('../img/search.png') center no-repeat
+			&-2
+				background: #097b84 url('../img/off.png') center no-repeat
+			&-3
+				background: #118f99 url('../img/security.png') center no-repeat
+			&-4
+				background: #1da0aa url('../img/apple.png') center no-repeat
+			&-5
+				background: #29b7c2 url('../img/basket.png') center no-repeat
+			&-6
+				background: #3ccad5 url('../img/star.png') center no-repeat
+
+.laptop
+	background: url('../img/main_bg.jpg') center no-repeat
+	background-size: cover
+	padding-top: 170px
+	padding-bottom: 70px
+	&_flex
+		display: flex
+		align-items: center
+		justify-content: space-around
+	&_info
+		color: #fff
+		h2
+			font-size: 40px
+			margin: 0
+		p
+			margin-top: 15px
+			margin-bottom: 35px
+		.btn
+			background-color: darken(#06ccb3, 5)
+		.cart
+			background-color: #3edac6
+
+footer
+	background-color: #333
+	padding: 20px 0
+	text-align: center
+	p
+		margin: 0
+		color: #fff
+		span
+			color: #fea100
+
+@media (max-width: 1050px)
+	.container
+		width: 95%
+	img
+		max-width: 100%
+
+@media (max-width: 768px)
+	.header
+		&_flex
+			display: block
+		&_logo
+			text-align: center
+		&_nav
+			ul
+				display: block
+				margin: 0 auto
+				text-align: center
+				li
+					margin: 0
+					margin-top: 20px
+					&::after
+						display: none
+					a
+						margin: 0
+	.minimal p
+		width: 80%
+		margin-left: auto
+		margin-right: auto
+	.minimal h2
+		font-size: 32px
+	.main
+		&_flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+		&_info
+			&_top
+				justify-content: center
+				margin-top: 20px
+				margin-bottom: 10px
+			&_bottom
+				justify-content: center
+			&_mid
+				h1
+					font-size: 32px
+	.icons .blocks
+		display: flex
+		flex-direction: column
+		flex-basis: 0
+		.block
+			width: 100%
+	.laptop
+		&_flex
+			flex-direction: column
+			text-align: center
+			justify-content: center
+			align-items: center
+		&_img
+			margin-bottom: 50px
+
